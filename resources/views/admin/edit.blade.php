@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>連絡ノート</title>
+        <title>（保護者）子どものプロフィール編集</title>
     </head>
     <body>
-        <h1>連絡ノート</h1>
+        <h1>（保護者）子どものプロフィール編集</h1>
     </body>
 </html>

@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>アカウント登録保育園</title>
+        <title>（保育園から）お知らせ投稿</title>
     </head>
     <body>
-        <h1>アカウント登録保育園</h1>
+        <h1>（保育園から）お知らせ投稿</h1>
     </body>
 </html>

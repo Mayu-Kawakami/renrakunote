@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>お知らせ</title>
+        <title>保護者マイページ</title>
     </head>
     <body>
-        <h1>お知らせ</h1>
+        <h1>保護者マイページ</h1>
     </body>
 </html>
