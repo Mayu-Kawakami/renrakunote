@@ -7,8 +7,4 @@ use Illuminate\Http\Request;
 class NoticeController extends Controller
 {
     //
-     public function add()
-    {
-        return view('notice');
-    }
 }
