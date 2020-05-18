@@ -8,6 +8,29 @@
         <title>トップページ</title>
     </head>
     <body>
-        <h1>トップページ</h1>
+        <h1>○○保育園連絡帳</h1>
+        
+      <section>    
+        <h2 class="information">お知らせ</h2>
+        <ul class="information-list">
+            <li>2020年○月○日　タイトル</li>
+            <li>2020年○月○日　タイトル</li>
+            <li>2020年○月○日　タイトル</li>
+            <li>2020年○月○日　タイトル</li>
+            <li>2020年○月○日　タイトル</li>
+        </ul>
+      </section>
+      
+      <section>
+        <div> class="account">
+          <h2>アカウント登録</h2>
+          <p>会員情報の登録・編集</p>
+          <p>お子さまのプロフィール登録・編集</p>
+          <p><a href="{{ action('Admin\MypageController@add') }}">設定</a></p>
+          <p><img src="/renrakunote/image/key.png"></p>
+        </div>
+      </section>
+      
+      
     </body>
 </html>
