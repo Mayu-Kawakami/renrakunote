@@ -22,12 +22,12 @@
       </section>
       
       <section>
-        <div> class="account">
+        <div class="account">
           <h2>アカウント登録</h2>
           <p>会員情報の登録・編集</p>
           <p>お子さまのプロフィール登録・編集</p>
           <p><a href="{{ action('Admin\MypageController@add') }}">設定</a></p>
-          <p><img src="/renrakunote/image/key.png"></p>
+          <p><img src="/renrakunote/image/key.png" width="327" height="214"></p>
         </div>
       </section>
       
