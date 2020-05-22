@@ -17,7 +17,6 @@ Route::get('/', function () {
 
 Route::get('admin/', 'Admin\MypageController@index'); //保護者マイページ
 Route::get('admin/create', 'Admin\MypageController@add');  //プロフィール登録
-Route::get('admin/edit', 'Admin\MypageController@edit'); //プロフィール編集
 Route::get('admin/renraku/create', 'Admin\MypageController@create'); //保護者からの連絡ノート投稿
 Route::get('renraku/', 'Admin\MypageController@renraku'); //連絡ノート一覧
 

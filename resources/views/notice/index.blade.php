@@ -10,14 +10,15 @@
     <body>
         <header>
             <div class="header-title-area">
-                <h1>お知らせ</h1>
+                <h1>○○保育園連絡帳</h1>
             </div>
         </header>
         
+        <h2>お知らせ</h2>
         <div class="notice-index">
             <div class="notice-left-contents">
                 <div class="notice-date">2020年月○日</div>
-                <h2 class="notice-title">お知らせタイトル</h2>
+                <h3 class="notice-title">お知らせタイトル</h3>
             </div>
             <div class="notice-right-contents">
                 <p class="notice-text">お知らせ本文が入ります。お知らせ本文が入ります。お知らせ本文が入ります。</p>
@@ -26,7 +27,7 @@
         <div class="notice-index">
             <div class="notice-left-contents">
                 <div class="notice-date">2020年月○日</div>
-                <h2 class="notice-title">お知らせタイトル</h2>
+                <h3 class="notice-title">お知らせタイトル</h3>
             </div>
             <div class="notice-right-contents">
                 <p class="notice-text">お知らせ本文が入ります。お知らせ本文が入ります。お知らせ本文が入ります。</p>
@@ -35,7 +36,7 @@
         <div class="notice-index">
             <div class="notice-left-contents">
                 <div class="notice-date">2020年月○日</div>
-                <h2 class="notice-title">お知らせタイトル</h2>
+                <h3 class="notice-title">お知らせタイトル</h3>
             </div>
             <div class="notice-right-contents">
                 <p class="notice-text">お知らせ本文が入ります。お知らせ本文が入ります。お知らせ本文が入ります。</p>
