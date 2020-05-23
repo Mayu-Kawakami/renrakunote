@@ -27,21 +27,21 @@
           <p>会員情報の登録・編集</p>
           <p>お子さまのプロフィール登録・編集</p>
           <p><a href="{{ action('Admin\MypageController@add') }}">設定</a></p>
-          <p><img src="./renrakunote/public/images/key.png" width="327" height="214"></p>
+          <p class="picture"><img src="{{ asset('images/key.png') }}" ></p>
         </div>
         
         <div class="renraku-note">
           <h2>連絡ノート</h2>
           <p>お子さまの健康状態、投薬依頼など</p>
           <p><a href="{{ action('Admin\MypageController@create') }}">連絡ノートを書く</a></p>
-          <p><img src="./renrakunote/public/images/renrakunote.png" width="327" height="214"></p>
+          <p class="picture"><img src="{{ asset('images/renrakunote.png') }}"></p>
         </div>
         
         <div class="blog">
           <h2>今日のできごと</h2>
           <p>園での様子やお知らせ</p>
           <p><a href="{{ action('Admin\MypageController@renraku') }}">詳しく見る</a></p>
-          <p><img src="./renrakunote/public/images/picture.png" width="327" height="214"></p>
+          <p class="picture"><img src="{{ asset('images/picture.png') }}"></p>
         </div>
       </section>
       
