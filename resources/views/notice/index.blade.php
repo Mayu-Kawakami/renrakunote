@@ -1,62 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.admin')
+@section('title', 'お知らせ一覧')
 
-        <title>（保育園から）お知らせ一覧</title>
-    </head>
-    <body>
-        <header>
-            <div class="header-title-area">
-                <h1>○○保育園連絡帳</h1>
+@section('content')
+    <div class="container">
+        <div class="row">
+            <h2>お知らせ一覧</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ action('NoticeController@add') }}" role="button" class="btn btn-primary">新規作成</a>
             </div>
-        </header>
-        
-        <h2>お知らせ</h2>
-        <div class="notice-index">
-            <div class="notice-left-contents">
-                <div class="notice-date">2020年月○日</div>
-                <h3 class="notice-title">お知らせタイトル</h3>
-            </div>
-            <div class="notice-right-contents">
-                <p class="notice-text">お知らせ本文が入ります。お知らせ本文が入ります。お知らせ本文が入ります。</p>
+            <div class="col-md-8">
+                <form action="{{ action('NoticeController@index') }}" method="get">
+                    <div class="form-group row">
+                        <label class="col-md-2">タイトル</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
+                        </div>
+                        <div class="col-md-2">
+                            {{ csrf_field() }}
+                            <input type="submit" class="btn btn-primary" value="検索">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="notice-index">
-            <div class="notice-left-contents">
-                <div class="notice-date">2020年月○日</div>
-                <h3 class="notice-title">お知らせタイトル</h3>
-            </div>
-            <div class="notice-right-contents">
-                <p class="notice-text">お知らせ本文が入ります。お知らせ本文が入ります。お知らせ本文が入ります。</p>
+        <div class="row">
+            <div class="list-news col-md-12 mx-auto">
+                <div class="row">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th width="10%">ID</th>
+                                <th width="20%">タイトル</th>
+                                <th width="50%">本文</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($posts as $news)
+                                <tr>
+                                    <th>{{ $news->id }}</th>
+                                    <td>{{ \Str::limit($news->title, 100) }}</td>
+                                    <td>{{ \Str::limit($news->body, 250) }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-        <div class="notice-index">
-            <div class="notice-left-contents">
-                <div class="notice-date">2020年月○日</div>
-                <h3 class="notice-title">お知らせタイトル</h3>
-            </div>
-            <div class="notice-right-contents">
-                <p class="notice-text">お知らせ本文が入ります。お知らせ本文が入ります。お知らせ本文が入ります。</p>
-            </div>
-        </div>
-        
-        <div class="button">
-            <p><p><a href="{{ action('ToppageController@index') }}">TOPへ戻る</a></p></p>
-        </div>
-        
-      <footer>
-        <div class="footer">
-          <p>○○保育園</p>
-          <ul>
-            <li>〒123-4567 〇〇県〇〇市〇〇町1-2-3</li>
-            <li>TEL:0000-123-4567</li>
-            <li>FAX:0000-123-4568</li>
-          </ul>
-        </div>
-      </footer>
-
-    </body>
-</html>
+    </div>
+@endsection

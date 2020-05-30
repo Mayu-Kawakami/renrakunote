@@ -1,0 +1,33 @@
+h1{
+  font-size: 25px;
+}
+img{
+  width: 100%;
+}
+
+p{
+  font-size: 14px;
+}
+
+.picture{
+  line-height: 0;
+}
+
+header{
+  background: url(../images/main.png) no-repeat;
+  background-size: contain;
+  height: 38vw;
+}
+
+.top-menu{
+  text-align: center;
+}
+
+.top-menu h2{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer{
+  background: #E0FFFF;
+}

@@ -6,14 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSRF Token -->
-         {{-- 後の章で説明します --}}
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。 --}}
         <title>@yield('title')</title>
 
         <!-- Scripts -->
-         {{-- Laravel標準で用意されているJavascriptを読み込みます --}}
         <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
         <!-- Fonts -->
@@ -21,12 +18,15 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-        {{-- この章の後半で作成するCSSを読み込みます --}}
-        <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/style1.css') }}" rel="stylesheet">
     </head>
     <body>
+        <header class="header">
+            <div class="container">
+                <h1>○○保育園連絡帳</h1>
+            </div>
+        </header>
         <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
@@ -57,5 +57,20 @@
                 @yield('content')
             </main>
         </div>
+        <footer class="footer">
+            <div class="container text-right">
+              <p>○○保育園</p>
+                  <ul class="mb-0">
+                    <li>〒123-4567 〇〇県〇〇市〇〇町1-2-3</li>
+                    <li>TEL:0000-123-4567</li>
+                    <li>FAX:0000-123-4568</li>
+                  </ul>
+            </div>
+        </footer>
+
     </body>
 </html>
+        
+        
+        
+

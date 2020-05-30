@@ -19,7 +19,7 @@ class NoticeController extends Controller
     }
     
     //お知らせ一覧
-    public function index()
+    public function index(Request $request)
     {
         return view('notice.index');
     }
