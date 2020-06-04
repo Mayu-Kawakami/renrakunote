@@ -21,7 +21,7 @@
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <header class="header">
+        <header class="header top-header">
             <div class="container">
                 <h1>○○保育園連絡帳</h1>
             </div>

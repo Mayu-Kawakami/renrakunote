@@ -1,3 +1,52 @@
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address, img, dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, menu, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+ol, ul {
+  list-style: none;
+}
+ul ul{
+  margin: 0;
+}
+table {
+  border-spacing: 0;
+  table-layout: fixed;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, nav, section {
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
 
 /*!
@@ -4921,12 +4970,12 @@ input[type=button].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #212529;
 }
 
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
-  color: #fff;
+  color: #696969;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -10933,3 +10982,36 @@ a.text-dark:focus {
   }
 }
 
+h1{
+  font-size: 40px;
+}
+img{
+  width: 100%;
+}
+
+p{
+  font-size: 14px;
+}
+
+.picture{
+  line-height: 0;
+}
+
+.top-header{
+  background: url(../images/main.png) no-repeat;
+  background-size: contain;
+  height: 38vw;
+}
+
+.top-menu{
+  text-align: center;
+}
+
+.top-menu h2{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer{
+  background: #E0FFFF;
+}

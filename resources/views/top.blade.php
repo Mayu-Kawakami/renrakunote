@@ -4,14 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
         <title>トップページ</title>
     </head>
     
     <body>
-      <header class="mb-5">
+      <header class="mb-5 top-header">
         <div class="container">
         <h1>○○保育園連絡帳</h1>
         </div>

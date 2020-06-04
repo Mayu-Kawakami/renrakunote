@@ -1,75 +1,89 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.admin')
+@section('title', 'お子さまのプロフィール編集')
 
-        <title>保護者からの連絡ノート投稿</title>
-    </head>
-    <body>
-        <header>
-        <div class="header-title-area">
-        <h1>保護者からの連絡ノート投稿</h1>
-        </div>
-        </header>
-        
-        <section>
+@section('content')
+
+<div class="container">
+    <div class="form-group row">
             <h2>連絡ノート</h2>
-            <div class="form-group row">
-                <label for="taion">体温：</label>
-                <input type="number" name="taion">℃
-            </div>
-            <div class="form-group row">
-                <label for="breakfast">朝食：</label>
-                <input type="text" name="breakfast">
-            </div>
-            <div class="form-group row">
-                <label for="ben">便：</label>
-                <label for="kenkou">健康<input type="number" name="kenkou">回</label>
-                <label for="nan">軟便<input type="number" name="nan">回</label>
-                <label for="geri">下痢<input type="number" name="geri">回</label>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-2">薬：</label>
-                <div class="row col-md-10">
-                    <label><input type="radio" name="medicine" value="ari">あり</label>
-                    <label><input type="radio" name="medicine" value="nashi">なし</label>
-                    <p>※「あり」の場合は投薬依頼を登録して下さい。</p>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="renraku">連絡事項：</label>
-                <textarea class="renraku" name="renraku" rows="10"></textarea>
-            </div>
-        </section>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">体温：</label>
+        <div class="row col-md-4 form-inline">
+            <input type="number"  class="form-control" name="taion">℃
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">朝食：</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" name="breakfast">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">便：</label>
+        <label class="col-md-1 text-right">健康</label>
+        <input type="number" class="form-control form-inline col-md-1" name="kenkou">回
+        <label class="col-md-1 text-right">軟便</label>
+        <input type="number" class="form-control form-inline col-md-1" name="kenkou">回
+        <label class="col-md-1 text-right">下痢</label>
+        <input type="number" class="form-control form-inline col-md-1" name="kenkou">回
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">薬：</label>
+        <div class="row col-md-8">
+            <label><input type="radio" name="medicine" value="ari">あり</label>
+            <label><input type="radio" name="medicine" value="nashi">なし</label>
+            <p>※「あり」の場合は投薬依頼を登録して下さい。</p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">連絡事項：</label>
+        <div class="col-md-8">
+        <textarea class="form-control" name="renraku" rows="10"></textarea>
+        </div>
+    </div>
         
-        <input type="submit" class="btn btn-primary" value="登録">
-        
-        <section>
-            <h2>投薬依頼</h2>
+    <div class="row text-center">
+        <div class="col-12">
+        <input type="submit" class="btn btn-primary mb-5" value="登録">
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>投薬依頼</h2>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">病院名：</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" name="hospital">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">症状：</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" name="symptom">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-2 text-right">与薬時間：</label>
+        <div class="row col-md-8">
+            <label><input type="radio" name="time" value="before">食前</label>
+            <label><input type="radio" name="time" value="after">食後</label>
+        </div>
+    </div>
             <div class="form-group row">
-                <label for="hospital">病院名：</label>
-                <input type="text" name="hospital">
-            </div>
-            <div class="form-group row">
-                <label for="symptom">症状：</label>
-                <input type="text" name="symptom">
-            </div>
-            <div class="form-group row">
-                <label class="col-md-2">与薬時間：</label>
-                <div class="row col-md-10">
-                    <label><input type="radio" name="before" value="before">食前</label>
-                    <label><input type="radio" name="after" value="after">食後</label>
+                <label class="col-md-2 text-right">薬の種類：</label>
+                <div class="row col-md-10 text-inline">
+                    <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
+                    <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
+                    <label class="col-md-2 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
+                    
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-2">薬の種類：</label>
-                <div class="row col-md-10">
-                    <label><input type="radio" name="powder" value="powder">粉</label>
-                    <label><input type="radio" name="syrup" value="syrup">シロップ</label>
-                    <label><input type="radio" name="tablet" value="tablet">錠剤</label>
-                    <label for="other">その他</label><input type="text" name="other">
+                <div class="form-group row">
+                    <label class="col-md-2 text-right">:</label>
+                    <div class="row col-md-10 text-right text-inline">
+                        <label class="col-md-4 text-right">その他</label><input type="text" class="form-control text-inline" name="other">
+                    </div>
                 </div>
             </div>    
             <div class="form-group row">
@@ -85,17 +99,7 @@
         </section>
         
         <input type="submit" class="btn btn-primary" value="登録">
-        
-        <footer>
-        <div class="footer">
-          <p>○○保育園</p>
-          <ul>
-            <li>〒123-4567 〇〇県〇〇市〇〇町1-2-3</li>
-            <li>TEL:0000-123-4567</li>
-            <li>FAX:0000-123-4568</li>
-          </ul>
-        </div>
-      </footer>
-        
-    </body>
-</html>
+
+<!--container-->
+</div>        
+@endsection
