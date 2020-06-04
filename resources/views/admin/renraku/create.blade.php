@@ -71,34 +71,33 @@
             <label><input type="radio" name="time" value="after">食後</label>
         </div>
     </div>
-            <div class="form-group row">
-                <label class="col-md-2 text-right">薬の種類：</label>
-                <div class="row col-md-10 text-inline">
-                    <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
-                    <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
-                    <label class="col-md-2 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
-                    
-                </div>
-                <div class="form-group row">
-                    <label class="col-md-2 text-right">:</label>
-                    <div class="row col-md-10 text-right text-inline">
-                        <label class="col-md-4 text-right">その他</label><input type="text" class="form-control text-inline" name="other">
-                    </div>
-                </div>
-            </div>    
-            <div class="form-group row">
-                <p>※家でのみ服用</p>
-                <label class="col-md-2">薬の種類：</label>
-                <div class="row col-md-10">
-                    <label><input type="radio" name="powder" value="powder">粉</label>
-                    <label><input type="radio" name="syrup" value="syrup">シロップ</label>
-                    <label><input type="radio" name="tablet" value="tablet">錠剤</label>
-                    <label for="other">その他</label><input type="text" name="other">        
-                </div>
-            </div>
-        </section>
-        
-        <input type="submit" class="btn btn-primary" value="登録">
+    <div class="form-group row">
+        <label class="col-md-2 text-right">薬の種類：</label>
+        <div class="row col-md-8 text-inline">
+            <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
+            <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
+            <label class="col-md-2 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
+            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">外用薬</label>
+        </div>
+    </div>
+    <div class="row">
+        <p>※家でのみ服用</p>
+    </div>
+    <div class="form-group row">
+    <label class="col-md-2 text-right">薬の種類：</label>
+        <div class="row col-md-8 text-inline">
+            <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
+            <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
+            <label class="col-md-2 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
+            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">外用薬</label>
+        </div>
+    </div>
+            
+    <div class="row text-center">
+        <div class="col-12">
+        <input type="submit" class="btn btn-primary mb-5" value="登録">
+        </div>
+    </div>
 
 <!--container-->
 </div>        
