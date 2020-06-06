@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>お知らせ新規作成</h2>
-                <form action="{{ action('NoticeController@create') }}" method="post" enctype="multipart/form-data">
+                <form class="border p-3" action="{{ action('NoticeController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
@@ -16,14 +16,14 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2" for="title">タイトル</label>
-                        <div class="col-md-10">
+                        <label class="col-md-3" for="title">タイトル</label>
+                        <div class="col-md-9">
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2" for="body">本文</label>
-                        <div class="col-md-10">
+                        <label class="col-md-3" for="body">本文</label>
+                        <div class="col-md-9">
                             <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
                         </div>
                     </div>

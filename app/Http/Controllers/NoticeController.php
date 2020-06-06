@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class NoticeController extends Controller
 {
     //お知らせ投稿
+     public function add()
+  {
+      return view('notice.create');
+  }
     public function create()
     {
         return view('notice.create');
