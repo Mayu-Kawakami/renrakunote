@@ -1,12 +1,13 @@
 @extends('layouts.admin')
-@section('title', 'お子さまのプロフィール編集')
+@section('title', '連絡ノート')
 
 @section('content')
 
 <div class="container">
     <div class="form-group row">
-            <h2>連絡ノート</h2>
+        <h2>連絡ノート</h2>
     </div>
+    <form class="border p-3 mb-5">
     <div class="form-group row">
         <label class="col-md-2 text-right">体温：</label>
         <div class="row col-md-4 form-inline">
@@ -45,13 +46,15 @@
         
     <div class="row text-center">
         <div class="col-12">
-        <input type="submit" class="btn btn-primary mb-5" value="登録">
+        <input type="submit" class="btn btn-primary mb-3" value="登録">
         </div>
     </div>
+    </form>
 
     <div class="row">
         <h2>投薬依頼</h2>
     </div>
+    <form class="border p-4 mb-5">
     <div class="form-group row">
         <label class="col-md-2 text-right">病院名：</label>
         <div class="col-md-8">
@@ -76,7 +79,7 @@
         <div class="row col-md-8 text-inline">
             <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
             <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
-            <label class="col-md-2 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
+            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
             <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">外用薬</label>
         </div>
     </div>
@@ -88,16 +91,17 @@
         <div class="row col-md-8 text-inline">
             <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
             <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
-            <label class="col-md-2 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
+            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
             <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">外用薬</label>
         </div>
     </div>
             
     <div class="row text-center">
         <div class="col-12">
-        <input type="submit" class="btn btn-primary mb-5" value="登録">
+        <input type="submit" class="btn btn-primary mb-3" value="登録">
         </div>
     </div>
+    </form>
 
 <!--container-->
 </div>        

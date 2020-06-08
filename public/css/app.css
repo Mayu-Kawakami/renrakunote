@@ -11001,6 +11001,7 @@ p{
   background: url(../images/main.png) no-repeat;
   background-size: contain;
   height: 38vw;
+  background-position: center;
 }
 
 .top-menu{

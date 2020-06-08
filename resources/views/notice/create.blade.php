@@ -28,7 +28,11 @@
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="更新">
+                    <div class="row text-center">
+                        <div class="col-12">
+                        <input type="submit" class="btn btn-primary" value="更新">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
