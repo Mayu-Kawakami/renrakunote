@@ -7,7 +7,6 @@
             <div class="col-md-8 mx-auto">
                 <h2>お知らせ新規作成</h2>
                 <form class="border p-3" action="{{ action('NoticeController@create') }}" method="post" enctype="multipart/form-data">
-
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
