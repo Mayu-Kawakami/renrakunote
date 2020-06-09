@@ -31,9 +31,5 @@ class MypageController extends Controller
         return view('admin.renraku.create');
     }
     
-    //連絡ノート一覧
-    public function renraku()
-    {
-        return view('renraku.index');
-    }
+
 }

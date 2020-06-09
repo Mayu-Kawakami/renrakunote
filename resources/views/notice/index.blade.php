@@ -13,8 +13,8 @@
             <div class="col-md-8">
                 <form action="{{ action('NoticeController@index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">タイトル</label>
-                        <div class="col-md-8">
+                        <label class="col-md-3">タイトル</label>
+                        <div class="col-md-7">
                             <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                         </div>
                         <div class="col-md-2">

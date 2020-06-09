@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>連絡ノート一覧</h2>
-                <form action="{{ action('Admin\MypageController@index') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action('NoticeController@renraku') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
