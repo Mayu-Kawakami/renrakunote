@@ -6,6 +6,14 @@
 <div class="container">
     <div class="form-group row">
         <h2>連絡ノート</h2>
+        <form action="{{ action('Admin\MypageController@create') }}" method="post" enctype="multipart/form-data">
+            @if (count($errors) > 0)
+                <ul>
+                    @foreach($errors->all() as $e)
+                        <li>{{ $e }}</li>
+                    @endforeach
+                </ul>
+            @endif
     </div>
     <form class="border p-3 mb-5">
     <div class="form-group row">
@@ -22,18 +30,17 @@
     </div>
     <div class="form-group row">
         <label class="col-md-2 text-right">便：</label>
-        <label class="col-md-1 text-right">健康</label>
-        <input type="number" class="form-control form-inline col-md-1" name="kenkou">回
-        <label class="col-md-1 text-right">軟便</label>
-        <input type="number" class="form-control form-inline col-md-1" name="kenkou">回
-        <label class="col-md-1 text-right">下痢</label>
-        <input type="number" class="form-control form-inline col-md-1" name="kenkou">回
+            <div class="row col-md-8">
+            <label><input type="radio" name="ben" value="あり">あり</label>
+            <label><input type="radio" name="ben" value="なし">なし</label>
+        </div>
+
     </div>
     <div class="form-group row">
         <label class="col-md-2 text-right">薬：</label>
         <div class="row col-md-8">
-            <label><input type="radio" name="medicine" value="ari">あり</label>
-            <label><input type="radio" name="medicine" value="nashi">なし</label>
+            <label><input type="radio" name="medicine" value="あり">あり</label>
+            <label><input type="radio" name="medicine" value="なし">なし</label>
             <p>※「あり」の場合は投薬依頼を登録して下さい。</p>
         </div>
     </div>
@@ -43,7 +50,9 @@
         <textarea class="form-control" name="renraku" rows="10"></textarea>
         </div>
     </div>
-        
+    
+    {{ csrf_field() }}
+    
     <div class="row text-center">
         <div class="col-12">
         <input type="submit" class="btn btn-primary mb-3" value="登録">
@@ -70,32 +79,22 @@
     <div class="form-group row">
         <label class="col-md-2 text-right">与薬時間：</label>
         <div class="row col-md-8">
-            <label><input type="radio" name="time" value="before">食前</label>
-            <label><input type="radio" name="time" value="after">食後</label>
+            <label><input type="radio" name="time" value="食前">食前</label>
+            <label><input type="radio" name="time" value="食後">食後</label>
         </div>
     </div>
     <div class="form-group row">
         <label class="col-md-2 text-right">薬の種類：</label>
         <div class="row col-md-8 text-inline">
-            <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
-            <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
-            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
-            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">外用薬</label>
+            <label class="col-md-2 text-right"><input type="radio" name="type" value="粉">粉</label>
+            <label class="col-md-3 text-right"><input type="radio" name="type" value="シロップ">シロップ</label>
+            <label class="col-md-3 text-right"><input type="radio" name="type" value="錠剤">錠剤</label>
+            <label class="col-md-3 text-right"><input type="radio" name="type" value="外用薬">外用薬</label>
         </div>
     </div>
-    <div class="row">
-        <p>※家でのみ服用</p>
-    </div>
-    <div class="form-group row">
-    <label class="col-md-2 text-right">薬の種類：</label>
-        <div class="row col-md-8 text-inline">
-            <label class="col-md-2 text-right"><input type="radio" name="powder" value="powder">粉</label>
-            <label class="col-md-3 text-right"><input type="radio" name="syrup" value="syrup">シロップ</label>
-            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">錠剤</label>
-            <label class="col-md-3 text-right"><input type="radio" name="tablet" value="tablet">外用薬</label>
-        </div>
-    </div>
-            
+    
+    {{ csrf_field() }}
+    
     <div class="row text-center">
         <div class="col-12">
         <input type="submit" class="btn btn-primary mb-3" value="登録">

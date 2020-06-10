@@ -47,7 +47,6 @@ class NoticeController extends Controller
           // それ以外はすべてのニュースを取得する
           $posts = Notice::all();
       }
-      return view('notice.index', ['posts' => $posts, 'cond_title' => $cond_title]);
-    }
+      return view('notice.index', ['posts' => $posts, 'cond_title' => $cond_title]);    }
 
 }

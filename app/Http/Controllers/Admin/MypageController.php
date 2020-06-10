@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Note;
+
 class MypageController extends Controller
 {
     //保護者マイページ
@@ -26,9 +28,19 @@ class MypageController extends Controller
     }
     
     //連絡ノート投稿
-    public function create()
+    public function create(Request $request)
     {
-        return view('admin.renraku.create');
+        $this->validate($request, Note::$rules);
+        
+         $note = new Note;
+         $form = $request->all();
+         
+         unset($form['_token']);
+         
+         $note->fill($form);
+         $note->save();
+
+        return redirect('admin/renraku/create');
     }
     
 
