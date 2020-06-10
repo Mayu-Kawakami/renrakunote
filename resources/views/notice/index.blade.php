@@ -37,11 +37,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $news)
+                            @foreach($posts as $notice)
                                 <tr>
-                                    <th>{{ $news->id }}</th>
-                                    <td>{{ \Str::limit($news->title, 100) }}</td>
-                                    <td>{{ \Str::limit($news->body, 250) }}</td>
+                                    <th>{{ $notice->id }}</th>
+                                    <td>{{ \Str::limit($notice->title, 100) }}</td>
+                                    <td>{{ \Str::limit($notice->body, 300) }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

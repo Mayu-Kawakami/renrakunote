@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Journals extends Model
+class Journal extends Model
 {
     //今日のできごと（園からの連絡ノート投稿）
     protected $guarded = array('id');

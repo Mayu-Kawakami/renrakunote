@@ -54,7 +54,7 @@
           <div class="text-area">
           <p>園での様子やお知らせ</p>
           </div>
-          <p class="text-center mb-1"><a class="btn btn-primary" href="{{ action('Admin\MypageController@renraku') }}">詳しく見る</a></p>
+          <p class="text-center mb-1"><a class="btn btn-primary" href="{{ action('JournalController@add') }}">詳しく見る</a></p>
           <p class="picture"><img src="{{ asset('images/picture.png') }}"></p>
         </div>
         </div>

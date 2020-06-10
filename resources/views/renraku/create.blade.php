@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>今日のできごと</h2>
-                <form  class="border p-3" action="{{ action('NoticeController@create') }}" method="post" enctype="multipart/form-data">
+                <form  class="border p-3" action="{{ action('JournalController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
@@ -18,12 +18,12 @@
                     <div class="form-group row">
                         <label class="col-md-3 text-right">クラス:</label>
                         <div class="row col-md-9">
-                            <label class="p-1"><input type="radio" name="year" value="0">0歳</label>
-                            <label class="p-1"><input type="radio" name="year" value="1">1歳</label>
-                            <label class="p-1"><input type="radio" name="year" value="2">2歳</label>
-                            <label class="p-1"><input type="radio" name="year" value="3">3歳</label>
-                            <label class="p-1"><input type="radio" name="year" value="4">4歳</label>
-                            <label class="p-1"><input type="radio" name="year" value="5">5歳</label>
+                            <label class="p-1"><input type="radio" name="year" value="0歳">0歳</label>
+                            <label class="p-1"><input type="radio" name="year" value="1歳">1歳</label>
+                            <label class="p-1"><input type="radio" name="year" value="2歳">2歳</label>
+                            <label class="p-1"><input type="radio" name="year" value="3歳">3歳</label>
+                            <label class="p-1"><input type="radio" name="year" value="4歳">4歳</label>
+                            <label class="p-1"><input type="radio" name="year" value="5歳">5歳</label>
                         </div>
                     </div>
 
