@@ -6,7 +6,7 @@
 <div class="container">
     <div class="form-group row">
         <h2>連絡ノート</h2>
-        <form action="{{ action('Admin\MypageController@create') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ action('Admin\RenrakuController@create') }}" method="post" enctype="multipart/form-data">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -15,13 +15,14 @@
                 </ul>
             @endif
     </div>
-    <form class="border p-3 mb-5">
-    <div class="form-group row">
-        <label class="col-md-2 text-right">体温：</label>
-        <div class="row col-md-4 form-inline">
-            <input type="number"  class="form-control" name="taion">℃
+    <div class="border p-3 mb-5">
+        <div class="form-group row">
+            <label class="col-md-2 text-right">体温：</label>
+            <div class="row col-md-4 form-inline">
+                <input type="number"  class="form-control" name="taion">℃
+            </div>
         </div>
-    </div>
+    
     <div class="form-group row">
         <label class="col-md-2 text-right">朝食：</label>
         <div class="col-md-8">
@@ -51,53 +52,55 @@
         </div>
     </div>
     
-    {{ csrf_field() }}
+        {{ csrf_field() }}
     
-    <div class="row text-center">
-        <div class="col-12">
-        <input type="submit" class="btn btn-primary mb-3" value="登録">
+        <div class="row text-center">
+            <div class="col-12">
+            <input type="submit" class="btn btn-primary mb-3" value="登録">
+            </div>
         </div>
     </div>
-    </form>
+    
 
     <div class="row">
         <h2>投薬依頼</h2>
     </div>
-    <form class="border p-4 mb-5">
-    <div class="form-group row">
-        <label class="col-md-2 text-right">病院名：</label>
-        <div class="col-md-8">
-            <input type="text" class="form-control" name="hospital">
+    <div class="border p-4 mb-5">
+        <div class="form-group row">
+            <label class="col-md-2 text-right">病院名：</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="hospital">
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-md-2 text-right">症状：</label>
-        <div class="col-md-8">
-            <input type="text" class="form-control" name="symptom">
+        <div class="form-group row">
+            <label class="col-md-2 text-right">症状：</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="symptom">
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-md-2 text-right">与薬時間：</label>
-        <div class="row col-md-8">
-            <label><input type="radio" name="time" value="食前">食前</label>
-            <label><input type="radio" name="time" value="食後">食後</label>
+        <div class="form-group row">
+            <label class="col-md-2 text-right">与薬時間：</label>
+            <div class="row col-md-8">
+                <label><input type="radio" name="time" value="食前">食前</label>
+                <label><input type="radio" name="time" value="食後">食後</label>
+            </div>
         </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-md-2 text-right">薬の種類：</label>
-        <div class="row col-md-8 text-inline">
-            <label class="col-md-2 text-right"><input type="radio" name="type" value="粉">粉</label>
-            <label class="col-md-3 text-right"><input type="radio" name="type" value="シロップ">シロップ</label>
-            <label class="col-md-3 text-right"><input type="radio" name="type" value="錠剤">錠剤</label>
-            <label class="col-md-3 text-right"><input type="radio" name="type" value="外用薬">外用薬</label>
+        <div class="form-group row">
+            <label class="col-md-2 text-right">薬の種類：</label>
+            <div class="row col-md-8 text-inline">
+                <label class="col-md-2 text-right"><input type="radio" name="type" value="粉">粉</label>
+                <label class="col-md-3 text-right"><input type="radio" name="type" value="シロップ">シロップ</label>
+                <label class="col-md-3 text-right"><input type="radio" name="type" value="錠剤">錠剤</label>
+                <label class="col-md-3 text-right"><input type="radio" name="type" value="外用薬">外用薬</label>
+            </div>
         </div>
-    </div>
     
-    {{ csrf_field() }}
+        {{ csrf_field() }}
     
-    <div class="row text-center">
-        <div class="col-12">
-        <input type="submit" class="btn btn-primary mb-3" value="登録">
+        <div class="row text-center">
+            <div class="col-12">
+            <input type="submit" class="btn btn-primary mb-3" value="登録">
+            </div>
         </div>
     </div>
     </form>

@@ -40,4 +40,35 @@ class JournalController extends Controller
       } 
         return view('renraku.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
+    
+    //今日のできごと（園からの）連絡ノート編集
+    public function edit(Request $request)
+    {
+        $journal = Journal::find($request->id);
+        if (empty($journal)) {
+        abort(404);    
+      }
+      return view('renraku.edit', ['journal_form' => $journal]);
+    }
+    
+    public function update(Request $request)
+    {
+        $this->validate($request, Journal::$rules);
+        $journal = Journal::find($request->id);
+        $journal_form = $journal->all();
+        unset($journal['_token']);
+        
+        $journal->fill($journal_form)->save();
+        
+        return redirect('renraku');
+    }
+    
+     public function delete(Request $request)
+     {
+         $journal = Journal::find($request->id);
+         
+         $journal->delete();
+         return redirect('renraku');
+     }
+
 }

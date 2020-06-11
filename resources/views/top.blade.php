@@ -45,7 +45,7 @@
           <div class="text-area">
           <p>お子さまの健康状態、投薬依頼など</p>
           </div>
-          <p class="text-center mb-1"><a class="btn btn-primary" href="{{ action('Admin\MypageController@create') }}">連絡ノートを書く</a></p>
+          <p class="text-center mb-1"><a class="btn btn-primary" href="{{ action('Admin\RenrakuController@create') }}">連絡ノートを書く</a></p>
           <p class="picture"><img src="{{ asset('images/renrakunote.png') }}"></p>
         </div>
         

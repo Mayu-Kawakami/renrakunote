@@ -27,21 +27,4 @@ class MypageController extends Controller
         return view('admin.edit');
     }
     
-    //連絡ノート投稿
-    public function create(Request $request)
-    {
-        $this->validate($request, Note::$rules);
-        
-         $note = new Note;
-         $form = $request->all();
-         
-         unset($form['_token']);
-         
-         $note->fill($form);
-         $note->save();
-
-        return redirect('admin/renraku/create');
-    }
-    
-
 }

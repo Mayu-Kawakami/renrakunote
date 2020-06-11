@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-@section('title', '今日のできごと')
+@section('title', '今日のできごと新規作成')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>今日のできごと</h2>
+                <h2>今日のできごと新規作成</h2>
                 <form  class="border p-3" action="{{ action('JournalController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)

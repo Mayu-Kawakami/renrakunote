@@ -34,6 +34,7 @@
                                 <th width="10%">ID</th>
                                 <th width="20%">タイトル</th>
                                 <th width="50%">本文</th>
+                                <th width="10%">操作</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,6 +43,15 @@
                                     <th>{{ $notice->id }}</th>
                                     <td>{{ \Str::limit($notice->title, 100) }}</td>
                                     <td>{{ \Str::limit($notice->body, 300) }}</td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('NoticeController@edit', ['id' => $notice->id]) }}">編集</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ action('NoticeController@delete', ['id' => $notice->id]) }}">削除</a>
+                                        </div>
+
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

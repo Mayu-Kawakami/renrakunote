@@ -30,11 +30,6 @@ class NoticeController extends Controller
         return redirect('notice/create');
     }
     
-    //お知らせ編集
-    public function edit()
-    {
-        return view('notice.edit');
-    }
     
     //お知らせ一覧
     public function index(Request $request)
@@ -47,6 +42,41 @@ class NoticeController extends Controller
           // それ以外はすべてのニュースを取得する
           $posts = Notice::all();
       }
-      return view('notice.index', ['posts' => $posts, 'cond_title' => $cond_title]);    }
+      return view('notice.index', ['posts' => $posts, 'cond_title' => $cond_title]);    
+        
+    }
+    
+    //お知らせ編集
+    public function edit(Request $request)
+    {
+        $notice = Notice::find($request->id);
+        if (empty($notice)) {
+        abort(404);    
+      }
+        return view('notice.edit', ['notice_form' => $notice]);
+    }
+    
+     public function update(Request $request)
+     {
+        $this->validate($request, Notice::$rules);
+        $notice = Notice::find($request->id);
+         
+        $notice_form = $request->all();
+        unset($notice_form['_token']);
+        
+        $notice->fill($notice_form)->save();
+        
+        return redirect('notice');
+     }
+     
+     //お知らせ削除
+     public function delete(Request $request)
+     {
+         $notice = Notice::find($request->id);
+         $notice->delete();
+         
+         return redirect('notice');
+     }
+
 
 }
