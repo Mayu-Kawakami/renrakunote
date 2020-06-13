@@ -20,6 +20,11 @@ class RenrakuController extends Controller
          $note = new Note;
          $form = $request->all();
          
+         
+         if ($form->medicine == 'あり'){
+            $this->validate($request, Note::$sub_rules); 
+         }
+         
          unset($form['_token']);
          
          $note->fill($form);

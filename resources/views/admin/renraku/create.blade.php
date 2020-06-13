@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="container">
-    <div class="form-group row">
+    <div class="row">
         <h2>連絡ノート</h2>
         <form action="{{ action('Admin\RenrakuController@create') }}" method="post" enctype="multipart/form-data">
             @if (count($errors) > 0)
@@ -14,52 +14,51 @@
                     @endforeach
                 </ul>
             @endif
-    </div>
-    <div class="border p-3 mb-5">
-        <div class="form-group row">
-            <label class="col-md-2 text-right">体温：</label>
-            <div class="row col-md-4 form-inline">
-                <input type="number"  class="form-control" name="taion">℃
+            <div class="border p-3 mb-5">
+                <div class="form-group row">
+                    <label class="col-md-2 text-right">体温：</label>
+                    <div class="row col-md-4 form-inline">
+                        <input type="number"  class="form-control" name="taion">℃
+                    </div>
+                </div>
+            
+            <div class="form-group row">
+                <label class="col-md-2 text-right">朝食：</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" name="breakfast">
+                </div>
             </div>
-        </div>
-    
-    <div class="form-group row">
-        <label class="col-md-2 text-right">朝食：</label>
-        <div class="col-md-8">
-            <input type="text" class="form-control" name="breakfast">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-md-2 text-right">便：</label>
-            <div class="row col-md-8">
-            <label><input type="radio" name="ben" value="あり">あり</label>
-            <label><input type="radio" name="ben" value="なし">なし</label>
-        </div>
-
-    </div>
-    <div class="form-group row">
-        <label class="col-md-2 text-right">薬：</label>
-        <div class="row col-md-8">
-            <label><input type="radio" name="medicine" value="あり">あり</label>
-            <label><input type="radio" name="medicine" value="なし">なし</label>
-            <p>※「あり」の場合は投薬依頼を登録して下さい。</p>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-md-2 text-right">連絡事項：</label>
-        <div class="col-md-8">
-        <textarea class="form-control" name="renraku" rows="10"></textarea>
-        </div>
-    </div>
-    
-        {{ csrf_field() }}
-    
-        <div class="row text-center">
-            <div class="col-12">
-            <input type="submit" class="btn btn-primary mb-3" value="登録">
+            <div class="form-group row">
+                <label class="col-md-2 text-right">便：</label>
+                    <div class="row col-md-8">
+                    <label><input type="radio" name="ben" value="あり">あり</label>
+                    <label><input type="radio" name="ben" value="なし">なし</label>
+                </div>
+        
             </div>
-        </div>
-    </div>
+            <div class="form-group row">
+                <label class="col-md-2 text-right">薬：</label>
+                <div class="row col-md-8">
+                    <label><input type="radio" name="medicine" value="あり">あり</label>
+                    <label><input type="radio" name="medicine" value="なし">なし</label>
+                    <p>※「あり」の場合は投薬依頼を登録して下さい。</p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2 text-right">連絡事項：</label>
+                <div class="col-md-8">
+                <textarea class="form-control" name="renraku" rows="10"></textarea>
+                </div>
+            </div>
+            
+                {{ csrf_field() }}
+            
+                <div class="row text-center">
+                    <div class="col-12">
+                    <input type="submit" class="btn btn-primary mb-3" value="登録">
+                    </div>
+                </div>
+            </div>
     
 
     <div class="row">

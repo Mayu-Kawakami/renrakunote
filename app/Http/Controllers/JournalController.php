@@ -55,8 +55,8 @@ class JournalController extends Controller
     {
         $this->validate($request, Journal::$rules);
         $journal = Journal::find($request->id);
-        $journal_form = $journal->all();
-        unset($journal['_token']);
+        $journal_form = $request->all();
+        unset($journal_form['_token']);
         
         $journal->fill($journal_form)->save();
         

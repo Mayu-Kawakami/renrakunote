@@ -14,4 +14,11 @@ class Note extends Model
         'ben' => 'required',
         'medicine' => 'required',
     );
+    
+    public static $sub_rules = array(
+        'hospital' => 'required',
+        'symptom' => 'required',
+        'time' => 'required',
+        'type' => 'required',
+    ); 
 }
