@@ -30,10 +30,9 @@
                 <div class="form-group row">
                     <label class="col-md-2 text-right">便：</label>
                         <div class="row col-md-8">
-                        <label><input type="radio" name="ben" value="あり">あり</label>
-                        <label><input type="radio" name="ben" value="なし">なし</label>
-                    </div>
-            
+                            <label><input type="radio" name="ben" value="あり">あり</label>
+                            <label><input type="radio" name="ben" value="なし">なし</label>
+                        </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2 text-right">薬：</label>
@@ -54,7 +53,7 @@
                 
                 <div class="row text-center">
                     <div class="col-12">
-                    <input type="submit" class="btn btn-primary mb-3" value="登録">
+                        <input type="submit" class="btn btn-primary mb-3" value="登録">
                     </div>
                 </div>
             </div>
@@ -95,7 +94,7 @@
             
                 <div class="row text-center">
                     <div class="col-12">
-                    <input type="submit" class="btn btn-primary mb-3" value="登録">
+                        <input type="submit" class="btn btn-primary mb-3" value="登録">
                     </div>
                 </div>
             </div>
