@@ -20,7 +20,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('admin/create', 'Admin\MypageController@add');  //プロフィール登録
     Route::get('admin/edit', 'Admin\MypageController@edit');  //プロフィール
     Route::get('admin/renraku/create', 'Admin\RenrakuController@add'); //保護者からの連絡ノート投稿
-    Route::post('admin/renraku/create', 'Admin\RenrakuController@create'); //保護者からの連絡ノート投稿
+    Route::post('admin/renraku/create', 'Admin\RenrakuController@create');
+    Route::get('admin/renraku', 'Admin\RenrakuController@index'); 
+    Route::get('admin/renraku/edit', 'Admin\RenrakuController@edit');
+    Route::post('admin/renraku/edit', 'Admin\RenrakuController@update');
     Route::get('renraku/', 'JournalController@index'); //連絡ノート一覧(今日のできごと)
     Route::get('notice/', 'NoticeController@index'); //お知らせ一覧
 });
