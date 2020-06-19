@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Note;
 
 class RenrakuController extends Controller
 {
@@ -20,14 +21,9 @@ class RenrakuController extends Controller
          $note = new Note;
          $form = $request->all();
          
+         unset($form['_token']);
          
-         if ($form->medicine == 'あり'){
-            $this->validate($request, Note::$sub_rules); 
-         }
-         
-         unset($note_form['_token']);
-         
-         $note->fill($note_form);
+         $note->fill($form);
          $note->save();
 
         return redirect('admin/renraku/create');
@@ -52,8 +48,13 @@ class RenrakuController extends Controller
         $note_form = $request->all();
         unset($note_form['_token']);
         
-        $news->fill($note_form)->save();
+        $note->fill($note_form)->save();
         
         return redirect('admin/renraku');
+    }
+    
+    public function index(Request $request)
+    {
+        return view('admin.renraku.index');
     }
 }
