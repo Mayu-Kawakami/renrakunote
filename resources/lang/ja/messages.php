@@ -8,4 +8,5 @@ return [
     'Confirm Password' => 'パスワードの確認',
     'Register' => '登録',
     'Name' => '名前',
+    'Relationship' => '続柄',
 ];

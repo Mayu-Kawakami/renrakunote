@@ -5,8 +5,7 @@
 
 <div class="container">
     <div class="row">
-        <h2>連絡ノート</h2>
-        <form action="{{ action('Admin\RenrakuController@create') }}" method="post" enctype="multipart/form-data">
+        <form class="col-8 mx-auto" action="{{ action('Admin\RenrakuController@create') }}" method="post" enctype="multipart/form-data">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -14,10 +13,11 @@
                     @endforeach
                 </ul>
             @endif
-            <div class="border p-3 mb-5">
+            <h2>連絡ノート</h2>
+            <div class="col-md-12 border p-3 mb-5">
                 <div class="form-group row">
                     <label class="col-md-2 text-right">体温：</label>
-                    <div class="row col-md-4 form-inline">
+                    <div class="col-md-8 form-inline">
                         <input type="number"  class="form-control" name="taion">℃
                     </div>
                 </div>
@@ -49,9 +49,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            
               <h2>投薬依頼</h2>
-            </div>
+            
             <div class="border p-4 mb-5">
                 <div class="form-group row">
                     <label class="col-md-2 text-right">病院名：</label>
@@ -84,15 +84,14 @@
             
                 {{ csrf_field() }}
             
+                </div>
                 <div class="row text-center">
                     <div class="col-12">
                         <input type="submit" class="btn btn-primary mb-3" value="登録">
                     </div>
                 </div>
-            </div>
         </form>
     </div>
 <!--container-->
 </div>        
 @endsection
-© 2020 GitHub, Inc.
