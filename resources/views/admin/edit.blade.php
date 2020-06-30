@@ -4,11 +4,11 @@
 @section('content')
 
     <div class="container">
-        <div class="form-group row">
+        <div class="col-md-8 form-group row">
                 <h2>お子さまのプロフィール編集</h2>
         </div>
             <div class="row">
-                <h3>子①</h3>
+                <h3>子</h3>
             </div>
             <div class="form-group row">
                 <label fclass="col-md-4 text-right">ニックネーム:</label>

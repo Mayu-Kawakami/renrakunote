@@ -9,22 +9,15 @@ use App\Note;
 
 class MypageController extends Controller
 {
-    //保護者マイページ
-    public function index()
-    {
-        return view('admin.index');
-    }
-    
-    //プロフィール登録
+    //子どものプロフィール登録
     public function add()
     {
         return view('admin.create');
     }
     
-    //プロフィール編集
-    public function edit()
+    public function create(Request $request)
     {
-        return view('admin.edit');
+        return redirect('admin/create');
     }
     
 }

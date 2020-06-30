@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function() {
     Route::get('admin/', 'Admin\MypageController@index'); //保護者マイページ
-    Route::get('admin/create', 'Admin\MypageController@add');  //プロフィール登録
-    Route::get('admin/edit', 'Admin\MypageController@edit');  //プロフィール
+    Route::get('admin/create', 'Admin\MypageController@add');  //子どものプロフィール登録
+    Route::post('admin/create', 'Admin\MypageController@create');  
     Route::get('admin/renraku/create', 'Admin\RenrakuController@add'); //保護者からの連絡ノート投稿
     Route::post('admin/renraku/create', 'Admin\RenrakuController@create');
     Route::get('admin/renraku', 'Admin\RenrakuController@index'); 
