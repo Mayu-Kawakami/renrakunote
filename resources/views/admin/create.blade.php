@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         
-        <form class="col-8 mx-auto" actionactionactionaction="{{ action('Admin\MypageController@create') }}" method="post" enctype="multipart/form-data">
+        <form class="col-8 mx-auto" action="{{ action('Admin\MypageController@create') }}" method="post" enctype="multipart/form-data">
             @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -101,5 +101,6 @@
             </div>
         </form>
     </div>
-</div><!--container-->        
+<!--container-->
+</div>        
 @endsection
