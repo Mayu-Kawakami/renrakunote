@@ -63,9 +63,9 @@
                         <div class="form-group row">
                             <label for="relationship" class="col-md-4 col-form-label text-md-right">{{ __('messages.Relationship') }}</label>
                             <div class="row col-md-8">
-                                <label><input type="radio" name="relationship" value="mother">母</label>
-                                <label><input type="radio" name="relationship" value="father">父</label>
-                                <label><input type="radio" name="relationship" value="grandparents">祖父母</label>
+                                <label><input type="radio" name="relationship" value="母">母</label>
+                                <label><input type="radio" name="relationship" value="父">父</label>
+                                <label><input type="radio" name="relationship" value="祖父母">祖父母</label>
                             </div>
                         </div>
 
