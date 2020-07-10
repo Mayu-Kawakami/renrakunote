@@ -31,4 +31,12 @@ class MypageController extends Controller
         return redirect('admin/create');
     }
     
+    public function index(Request $request)
+    {
+        $posts = Profile::all();
+        
+        return view('admin.index');
+    }
+    
+    
 }
