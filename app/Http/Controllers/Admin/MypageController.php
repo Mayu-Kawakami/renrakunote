@@ -35,7 +35,7 @@ class MypageController extends Controller
     {
         $posts = Profile::all();
         
-        return view('admin.index');
+        return view('admin.index', ['posts' => $posts]);
     }
     
     
