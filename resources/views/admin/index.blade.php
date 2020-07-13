@@ -33,6 +33,9 @@
                             <td>{{ \Str::limit($profile->gender, 10) }}</td>
                             <td>{{ \Str::limit($profile->birthday, 100) }}</td>
                             <td>
+                                <div>
+                                    <a href="{{ action('Admin\MypageController@edit', ['id' => $profile->id]) }}">編集</a>
+                                </div>
                             </td>
                         </tr>
                         @endforeach

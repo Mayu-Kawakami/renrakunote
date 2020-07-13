@@ -38,5 +38,23 @@ class MypageController extends Controller
         return view('admin.index', ['posts' => $posts]);
     }
     
+    public function edit(Request $request)
+    {
+        $profile = Profile::find($request->id);
+        
+        return view('admin.edit', ['profile_form' => $profile]);
+    }
     
+    public function update(Request $request)
+    {
+        $this->validate($request, Profile::$rules);
+        
+        $profile = Profile::find($request->id);
+        $profile_form = $request->all();
+        unset($profile_form['_token']);
+        
+        $profile->fill($profile_form)->save();
+        
+        return redirect('admin');
+    }
 }
