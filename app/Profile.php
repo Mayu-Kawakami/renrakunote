@@ -14,8 +14,5 @@ class Profile extends Model
         'birthday' => 'required',
         );
         
-    public function notes()
-    {
-        return $this->hasMany('App\Note');
-    }
+    
 }

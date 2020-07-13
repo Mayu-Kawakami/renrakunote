@@ -34,7 +34,7 @@
             
 
             {{ csrf_field() }}
-            <input type="hidden" name="user_id" value="{{ Auth::user()->ID }}">
+            <input type="hidden" name="users_id" value="{{ Auth::user()->id }}">
             <div class="row text-center">
                 <div class="col-md-12 mb-5">
                 <input type="submit" class="btn btn-primary" value="登録">

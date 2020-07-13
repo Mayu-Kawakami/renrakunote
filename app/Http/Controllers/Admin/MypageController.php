@@ -33,7 +33,7 @@ class MypageController extends Controller
     
     public function index(Request $request)
     {
-        $posts = Profile::all();
+        $posts = Profile::find();
         
         return view('admin.index', ['posts' => $posts]);
     }
