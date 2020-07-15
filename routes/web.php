@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('admin/create', 'Admin\MypageController@create');
     Route::get('admin/edit', 'Admin\MypageController@edit');
     Route::post('admin/edit', 'Admin\MypageController@update');
+    Route::get('admin/delete', 'Admin\MypageController@delete');
     Route::get('admin/renraku/create', 'Admin\RenrakuController@add'); //保護者からの連絡ノート投稿
     Route::post('admin/renraku/create', 'Admin\RenrakuController@create');
     Route::get('admin/renraku', 'Admin\RenrakuController@index'); 
