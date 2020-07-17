@@ -27,7 +27,7 @@
                     </thead>
                     <tbody>
                         @if ( Auth::user()->profiles != NULL)
-                        @foreach( Auth::user()->profiles as $profile)
+                        @foreach( Auth::user()->profiles as $profile) 
                         <tr>
                             <th>{{ $profile->id }}</th>
                             <td>{{ \Str::limit($profile->nickname, 100) }}</td>
@@ -43,7 +43,7 @@
                             </td>
                         </tr>
                         @endforeach
-                        @else
+                         @else
                         <h2>登録されているお子さまはいません</h2>
                         @endif
                     </tbody>
