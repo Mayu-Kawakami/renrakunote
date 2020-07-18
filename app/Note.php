@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Note extends Model
 {
+    protected $dates = [display_date];
+    
     protected $guarded = array('id');
     //
     public static $rules = array(

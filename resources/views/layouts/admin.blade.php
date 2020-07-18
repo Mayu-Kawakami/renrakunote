@@ -24,6 +24,7 @@
         <header class="header">
             <div class="container">
                 <h1>○○保育園連絡帳</h1>
+                <h2>{{ \Carbon\Carbon::now()->format("Y年n月j日") }}</h2>
             </div>
         </header>
         <div id="app">
