@@ -18,7 +18,7 @@
                 <div class="form-group row">
                     <label class="col-md-2 text-right">体温：</label>
                     <div class="col-md-8 form-inline">
-                        <input type="number"  class="form-control" name="taion">℃
+                        <input type="number" step="0.1"  class="form-control" name="taion">℃
                     </div>
                 </div>
                 <div class="form-group row">
@@ -83,6 +83,7 @@
                 </div>
             
                 {{ csrf_field() }}
+                <input type="hidden" name="users_id" value="{{ Auth::user()->id }}">
                 </div>
                 <div class="row text-center">
                     <div class="col-12">

@@ -8,57 +8,74 @@
     </div>
         <div class="row">
         <div class="col-md-4">
-            <a href="{{ action('Admin\RenrakueController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+            <a href="{{ action('Admin\RenrakuController@add') }}" role="button" class="btn btn-primary">新規作成</a>
         </div>
         <div class="col-md-8">
             <form action="{{ action('Admin\RenrakuController@index') }}" method="get">
-                <div class="form-group row">
-                    <label class="col-md-3">タイトル</label>
-                    <div class="col-md-7">
-                        <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
-                    </div>
-                    <div class="col-md-2">
-                        {{ csrf_field() }}
-                        <input type="submit" class="btn btn-primary" value="検索">
-                    </div>
-                </div>
             </form>
         </div>
     </div>
 
-    <div class="list-renraku col-md-10 mx-auto">
+    <div class="col-md-12 mx-auto">
         <div class="row">
             <table>
-               <caption>連絡ノート</caption> 
-               <tr>
-                   <th>体温</th><td>{{ $note->taion }}</td>
-               </tr>
-               <tr>
-                   <th>朝食</th><td>{{ $note->breakfast }}</td>
-               </tr>
-               <tr>
-                   <th>便</th><td>{{ $note->ben }}</td>
-               </tr>
-               <tr>
-                   <th>薬</th><td>{{ $note->medicine }}</td>
-               </tr>
-               <tr>
-                   <th>連絡事項</th><td>{{ $note->renraku }}</td>
-               </tr>
+                <thead>
+                    <tr>
+                        <th width="5%">ID</th>
+                        <th width="10%">ニックネーム</th>
+                        <th width="10%">体温</th>
+                        <th width="20%">朝食</th>
+                        <th width="5%">便</th>
+                        <th width="10%">薬</th>
+                        <th width="30%">連絡事項</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(Auth::user()->notes != NULL)
+                    @foreach(Auth::user()->notes as $note)
+                    <tr>
+                        <th>{{ $note->id }}</th>
+                        <td>{{ $profile->nickname }}</td>
+                        <td>{{ $note->taion }}</td>
+                        <td>{{ $note->breakfast }}</td>>
+                        <td>{{ $note->ben }}</td>
+                        <td>{{ $note->medicine }}</td>
+                        <td>{{ $note->renraku }}</td>
+                    </tr>
+                    @endforeach
+                    @endif
+                    <tr>
+                        <td>{{ $note->hospital }}</td>
+                        <td>{{ $note->symptom }}</td>
+                        <td>{{ $note->time }}</td>
+                        <td>{{ $note->type }}</td>
+                    </tr>
+                </tbody>
             </table>
             <table>
                 <caption>投薬依頼</caption>
+                <thead>
+                    <tr>
+                        <th width="20%">病院名</th>
+                        <th width="20%">症状</th>
+                        <th width="10%">与薬時間</th>
+                        <th width="10%">薬の種類</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
                 <tr>
-                    <th>病院名</th><td>{{ $note->hospital }}</td>
+                    <th>病院名</th><td>{{ $note_form->hospital }}</td>
                 </tr>
                 <tr>
-                    <th>症状</th><td>{{ $note->symptom }}</td>
+                    <th>症状</th><td>{{ $note_form->symptom }}</td>
                 </tr>
                 <tr>
-                    <th>与薬時間</th><td>{{ $note->time }}</td>
+                    <th>与薬時間</th><td>{{ $note_form->time }}</td>
                 </tr>
                 <tr>
-                    <th>薬の種類</th><td>{{ $note->type }}</td>
+                    <th>薬の種類</th><td>{{ $note_form->type }}</td>
                 </tr>
             </table>
         </div>

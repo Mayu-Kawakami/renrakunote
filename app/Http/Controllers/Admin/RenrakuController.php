@@ -58,6 +58,8 @@ class RenrakuController extends Controller
     
     public function index(Request $request)
     {
-        return view('admin.renraku.index');
+        $posts = Note::all();
+        
+        return view('admin.renraku.index', ['posts' => $posts]);
     }
 }
