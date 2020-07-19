@@ -38,7 +38,7 @@ class RenrakuController extends Controller
         if(empty($note)){
             abort(404);
         }
-        return view('admin.renraku.edit', [$note_form => $note]);
+        return view('admin.renraku.edit', ['note_form' => $note]);
     }
     
     public function update(Request $request)
@@ -58,8 +58,8 @@ class RenrakuController extends Controller
     
     public function index(Request $request)
     {
-        $posts = Note::all();
+        $notes = Note::all();
         
-        return view('admin.renraku.index', ['posts' => $posts]);
+        return view('admin.renraku.index', ['notes' => $notes]);
     }
 }
