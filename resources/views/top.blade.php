@@ -66,9 +66,8 @@
       <section class="top-menu">
         <div class="row justify-content-between">
         <div class="account p-3 border col-3">
-          <h2>アカウント登録</h2>
+          <h2>お子さま情報</h2>
           <div class="text-area">
-          <p class="mb-1">会員情報の登録・編集</p>
           <p>お子さまのプロフィール登録・編集</p>
           </div>
           <p class="text-center mb-1"><a  class="btn btn-primary" href="{{ action('Admin\MypageController@add') }}">設定</a></p>

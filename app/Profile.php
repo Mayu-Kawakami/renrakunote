@@ -14,5 +14,5 @@ class Profile extends Model
         'birthday' => 'required',
         );
         
-    
+
 }
