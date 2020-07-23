@@ -29,7 +29,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if(Auth::user()->notes != NULL)
+                                <!--@if(Auth::user()->notes != NULL)-->
                                 @foreach($notes as $note)
                                 <tr>
                                     <th>{{ $note->id }}</th>
