@@ -13,7 +13,6 @@ class Note extends Model
         'breakfast' => 'required',
         'ben' => 'required',
         'medicine' => 'required',
-        'hospital' => 'required',
     );
     
     public static $sub_rules = array(
