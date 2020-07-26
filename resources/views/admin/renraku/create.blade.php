@@ -83,7 +83,7 @@
                 </div>
             
                 {{ csrf_field() }}
-                <input type="hidden" name="users_id" value="{{ Auth::user()->id }}">
+                <!--<input type="hidden" name="user_id" value="{{ Auth::user()->id }}"-->
                 </div>
                 <div class="row text-center">
                     <div class="col-12">

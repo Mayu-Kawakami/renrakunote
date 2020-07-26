@@ -12,43 +12,32 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8">
-            <form action="{{ action('Admin\RenrakuController@index') }}" method="get">
+        <div class="col-md-12">
+            <form class="col-12 mx-auto" action="{{ action('Admin\RenrakuController@index') }}" method="get">
                <div class="col-md-12 mx-auto">
-                    <div class="row">
+                    
                         <table>
                             <thead>
                                 <tr>
                                     <th width="5%">ID</th>
-                                    <th width="10%">ニックネーム</th>
                                     <th width="10%">体温</th>
-                                    <th width="20%">朝食</th>
-                                    <th width="5%">便</th>
+                                    <th width="30%">朝食</th>
+                                    <th width="10%">便</th>
                                     <th width="10%">薬</th>
-                                    <th width="30%">連絡事項</th>
+                                    <th width="35%">連絡事項</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!--@if(Auth::user()->notes != NULL)-->
-                                @foreach($notes as $note)
+                            @foreach($posts as $note)
                                 <tr>
                                     <th>{{ $note->id }}</th>
-                                    <td>{{ $profile->nickname }}</td>
                                     <td>{{ $note->taion }}</td>
                                     <td>{{ $note->breakfast }}</td>>
                                     <td>{{ $note->ben }}</td>
                                     <td>{{ $note->medicine }}</td>
                                     <td>{{ $note->renraku }}</td>
                                 </tr>
-                                <tr>
-                                    <td>{{ $note->hospital }}</td>
-                                    <td>{{ $note->symptom }}</td>
-                                    <td>{{ $note->time }}</td>
-                                    <td>{{ $note->type }}</td>
-                                </tr>
                             </tbody>
-                        @endforeach
-                        @endif
                         </table>        
                         <table>
                             <caption>投薬依頼</caption>
@@ -61,8 +50,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                <tr>
+                                    <th>{{ $note->hospital }}</th>
+                                    <th>{{ $note->symptom }}</th>
+                                    <th>{{ $note->time }}</th>
+                                    <th>{{ $note->type }}</th>
+                                </tr>
                             </tbody>
+                            @endforeach
                             <!--
                             <tr>
                                 <th>病院名</th><td>//{//{// $note->hospital }}</td>
@@ -78,7 +73,7 @@
                             </tr>
                             -->
                         </table>
-                    </div>
+                    
                 </div>
             </form>
         </div>
