@@ -16,72 +16,52 @@
             <form class="col-12 mx-auto" action="{{ action('Admin\RenrakuController@index') }}" method="get">
                <div class="col-md-12 mx-auto">
                    @foreach($posts as $note)
-                   <div class="renraku-post">
-                       <p>{{ \Carbon\Carbon::now()->isoformat("Y年MM月DD日(ddd)") }}</p>
+                   <div class="renraku-post border p-3">
+                       <p>{{ $note->created_at->isoformat("Y年MM月DD日(ddd)") }}</p>
+                       <ul class="row">
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">体温：</h3>
+                               <p class="col-md-5">{{ $note->taion }}℃</p>
+                           </li>
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">朝食：</h3>
+                               <p class="col-md-5">{{ $note->breakfast }}</p>
+                           </li>
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">便：</h3>
+                               <p class="col-md-5">{{ $note->ben }}</p>
+                           </li>
+                       </ul>
+                       <h3>連絡事項</h3>
+                       <div class="renraku-cont">
+                           {{ $note->renraku }}
+                       </div>
+                       @if( $note->medicine == 'あり' )
+                       <h2 class="mt-5">【投薬依頼】</h2>
+                       <ul class="row">
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">病院名：</h3>
+                               <p class="col-md-5">{{ $note->hospital }}</p>
+                           </li>
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">症状：</h3>
+                               <p class="col-md-5">{{ $note->symptom }}</p>
+                           </li>
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">投薬時間：</h3>
+                               <p class="col-md-5">{{ $note->time }}</p>
+                           </li>
+                           <li class="col-md-4 row">
+                               <h3 class="col-md-5">薬の種類：</h3>
+                               <p class="col-md-5">{{ $note->type }}</p>
+                           </li>
+                       </ul>
+                       @endif
                    </div>
-                    
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th width="5%">ID</th>
-                                    <th width="10%">体温</th>
-                                    <th width="30%">朝食</th>
-                                    <th width="10%">便</th>
-                                    <th width="10%">薬</th>
-                                    <th width="35%">連絡事項</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($posts as $note)
-                                <tr>
-                                    <th>{{ $note->id }}</th>
-                                    <td>{{ $note->taion }}</td>
-                                    <td>{{ $note->breakfast }}</td>>
-                                    <td>{{ $note->ben }}</td>
-                                    <td>{{ $note->medicine }}</td>
-                                    <td>{{ $note->renraku }}</td>
-                                </tr>
-                            </tbody>
-                        </table>        
-                        <table>
-                            <caption>投薬依頼</caption>
-                            <thead>
-                                <tr>
-                                    <th width="20%">病院名</th>
-                                    <th width="20%">症状</th>
-                                    <th width="10%">与薬時間</th>
-                                    <th width="10%">薬の種類</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>{{ $note->hospital }}</th>
-                                    <th>{{ $note->symptom }}</th>
-                                    <th>{{ $note->time }}</th>
-                                    <th>{{ $note->type }}</th>
-                                </tr>
-                            </tbody>
-                            @endforeach
-                            <!--
-                            <tr>
-                                <th>病院名</th><td>//{//{// $note->hospital }}</td>
-                            </tr>
-                            <tr>
-                                <th>症状</th><td>//{//{ $note->symptom }}</td>
-                            </tr>
-                            <tr>
-                                <th>与薬時間</th><td>//{//{ $note->time }}</td>
-                            </tr>
-                            <tr>
-                                <th>薬の種類</th><td>//{//{ $note->type }}</td>
-                            </tr>
-                            -->
-                        </table>
-                    
+                   @endforeach
                 </div>
             </form>
         </div>
     </div>
 </div>
-
 @endsection

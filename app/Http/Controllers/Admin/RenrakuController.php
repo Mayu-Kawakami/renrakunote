@@ -58,7 +58,7 @@ class RenrakuController extends Controller
     
     public function index(Request $request)
     {
-        $posts = Note::all();
+        $posts = Note::all()->sortByDesc('created_at');
         
         return view('admin.renraku.index', ['posts' => $posts]);
     }
