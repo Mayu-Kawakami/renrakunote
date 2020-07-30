@@ -15,6 +15,10 @@
         <div class="col-md-12">
             <form class="col-12 mx-auto" action="{{ action('Admin\RenrakuController@index') }}" method="get">
                <div class="col-md-12 mx-auto">
+                   @foreach($posts as $note)
+                   <div class="renraku-post">
+                       <p>{{ \Carbon\Carbon::now()->isoformat("Y年MM月DD日(ddd)") }}</p>
+                   </div>
                     
                         <table>
                             <thead>
