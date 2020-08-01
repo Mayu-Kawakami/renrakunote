@@ -47,6 +47,7 @@ Route::get('renraku/delete', 'JournalController@delete');
 
 
 Route::get('/', 'ToppageController@index')->middleware('auth'); //トップページ
+Route::get('osirase/', 'OsiraseController@index'); //保護者が見るお知らせ一覧
 
 
 
