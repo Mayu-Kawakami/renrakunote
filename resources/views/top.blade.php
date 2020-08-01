@@ -54,7 +54,7 @@
         <h2 class="information text-center">お知らせ</h2>
         <ul class="information-list">
             <li><a href="osirase/">2020年8月1日　【８月の主な行事予定です】</a></li>
-            <li><a href="osirase/">2020年6月9日　【テスト】</a></li>
+            <li><a href="osirase/">2020年6月11日　【テスト】</a></li>
             <li><a href="#">2020年○月○日　【タイトル】</a></li>
             <li><a href="#">2020年○月○日　【タイトル】</a></li>
             <li><a href="#">2020年○月○日　【タイトル】</a></li>
