@@ -10,8 +10,8 @@
             <div class="col-md-12">
                 <form class="col-md-12 mx-auto" action="{{ action('DekigotoController@index') }}" method="get">
                     <div class="col-md-12 mx-auto">
+                        <h3>{{ $date->isoformat("Y年MM月DD日(ddd)") }}</h3>
                         @foreach($posts as $journal)
-                        <h3>{{ $journal->updated_at->isoformat("Y年MM月DD日(ddd)") }}</h3>
                         <div class="dekigoto-post">
                             <ul class="row">
                                 <li class="col-md-12 mx-auto row">

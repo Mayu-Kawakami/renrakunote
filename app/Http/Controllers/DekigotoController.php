@@ -11,7 +11,9 @@ class DekigotoController extends Controller
     //
     public function index(Request $request)
     {
-        $posts = Journal::all()->sortByDesc('updated_at');
-        return view('dekigoto.index', ['posts' => $posts]);
+        $allposts = Journal::all()->sortByDesc('timestamps');
+        $date = $allposts[0]->created_at;
+        $posts = Journal::wheredate('created_at', '$date->isoformat("Y-MM-DD")')->get();
+        return view('dekigoto.index', ['posts' => $posts, 'date' => $date]);
     }
 }

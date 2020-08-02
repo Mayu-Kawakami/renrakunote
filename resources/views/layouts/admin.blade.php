@@ -24,8 +24,7 @@
         <header class="header">
             <div class="container">
                 <h1>○○保育園連絡帳</h1>
-                <h3 class="text-right">
-                    {{ \Carbon\Carbon::now()->isoformat("Y年MM月DD日(ddd)") }}</h3>
+                <h3 class="text-right">{{ \Carbon\Carbon::now()->isoformat("Y年MM月DD日(ddd)") }}</h3>
             </div>
         </header>
         <div id="app">
